@@ -66,7 +66,7 @@ class CalculateViewController: UIViewController {
             let destinationVC = segue.destination as! ResultsViewController?
             destinationVC?.splitValue = tipsyBrain.getResultSplit()
             destinationVC?.numberOfPeople = tipsyBrain.tipsy?.getNumberOfPeople() ?? 2
-            destinationVC?.tipPercent = (tipsyBrain.tipsy?.getSelectedTip())!*100 ?? 10.0
+            destinationVC?.tipPercent = (tipsyBrain.tipsy?.getSelectedTip())!*100
         }
     }
     
