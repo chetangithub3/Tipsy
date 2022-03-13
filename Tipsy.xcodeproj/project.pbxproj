@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		618C5E6A27DD844F00E671FC /* TipsyBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C5E6927DD844F00E671FC /* TipsyBrain.swift */; };
+		618C5E6C27DD866800E671FC /* Tipsy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618C5E6B27DD866800E671FC /* Tipsy.swift */; };
 		61DB7E8327DD6C5100BB4A9A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DB7E8227DD6C5100BB4A9A /* ResultsViewController.swift */; };
 		ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689522326708D006D4E2B /* AppDelegate.swift */; };
 		ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB689542326708D006D4E2B /* SceneDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		618C5E6927DD844F00E671FC /* TipsyBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyBrain.swift; sourceTree = "<group>"; };
+		618C5E6B27DD866800E671FC /* Tipsy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tipsy.swift; sourceTree = "<group>"; };
 		61DB7E8227DD6C5100BB4A9A /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		ADB6894F2326708D006D4E2B /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB689522326708D006D4E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		618C5E6627DD837800E671FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61DB7E8227DD6C5100BB4A9A /* ResultsViewController.swift */,
+				ADB689562326708D006D4E2B /* CalculateViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		618C5E6727DD83BF00E671FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADB689582326708D006D4E2B /* Main.storyboard */,
+				ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		618C5E6827DD83DA00E671FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				618C5E6927DD844F00E671FC /* TipsyBrain.swift */,
+				618C5E6B27DD866800E671FC /* Tipsy.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		ADB689462326708D006D4E2B = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +91,10 @@
 			children = (
 				ADB689522326708D006D4E2B /* AppDelegate.swift */,
 				ADB689542326708D006D4E2B /* SceneDelegate.swift */,
-				ADB689562326708D006D4E2B /* CalculateViewController.swift */,
-				61DB7E8227DD6C5100BB4A9A /* ResultsViewController.swift */,
-				ADB689582326708D006D4E2B /* Main.storyboard */,
+				618C5E6827DD83DA00E671FC /* Models */,
+				618C5E6627DD837800E671FC /* Controllers */,
+				618C5E6727DD83BF00E671FC /* Views */,
 				ADB6895B2326708E006D4E2B /* Assets.xcassets */,
-				ADB6895D2326708E006D4E2B /* LaunchScreen.storyboard */,
 				ADB689602326708E006D4E2B /* Info.plist */,
 			);
 			path = Tipsy;
@@ -143,8 +173,10 @@
 			files = (
 				ADB689572326708D006D4E2B /* CalculateViewController.swift in Sources */,
 				ADB689532326708D006D4E2B /* AppDelegate.swift in Sources */,
+				618C5E6A27DD844F00E671FC /* TipsyBrain.swift in Sources */,
 				ADB689552326708D006D4E2B /* SceneDelegate.swift in Sources */,
 				61DB7E8327DD6C5100BB4A9A /* ResultsViewController.swift in Sources */,
+				618C5E6C27DD866800E671FC /* Tipsy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

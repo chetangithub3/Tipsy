@@ -10,10 +10,12 @@ import UIKit
 
 class CalculateViewController: UIViewController {
     
+    var tipsyBrain = TipsyBrain()
+    
     var selectedTipValue: Float = 0.1
     var numberOfPeople: Int = 2
     var billTotal: Float = 0.0
-    var finalSplit: Float = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -52,22 +54,19 @@ class CalculateViewController: UIViewController {
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         billTextField.endEditing(true)
-        print(billTextField.text ?? "Error")
-        print(selectedTipValue)
-        
         billTotal = Float(billTextField.text!) ?? 0.0
-        finalSplit = Float(billTotal + billTotal*selectedTipValue)/Float(numberOfPeople)
-        print(finalSplit)
         
+        
+        tipsyBrain.calculateResultSplit(billTotal: billTotal, selectedTip: selectedTipValue, numberOfPeople: numberOfPeople)
         performSegue(withIdentifier: "toResult", sender: self)
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toResult"{
             let destinationVC = segue.destination as! ResultsViewController?
-            destinationVC?.splitValue = finalSplit
-            destinationVC?.numberOfPeople = numberOfPeople
-            destinationVC?.tipPercent = selectedTipValue * 100
+            destinationVC?.splitValue = tipsyBrain.getResultSplit()
+            destinationVC?.numberOfPeople = tipsyBrain.tipsy?.getNumberOfPeople() ?? 2
+            destinationVC?.tipPercent = (tipsyBrain.tipsy?.getSelectedTip())!*100 ?? 10.0
         }
     }
     
